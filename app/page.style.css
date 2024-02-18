@@ -1,0 +1,126 @@
+main {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #f3eae3;
+  display: grid;
+  place-items: center;
+}
+
+.container-product {
+  background-color: #fff;
+  height: 500px;
+  width: 700px;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+}
+  .container-product .img-container, 
+  .container-product .info-container {
+    width: 50%;
+    height: 100%;
+  }
+
+    .container-product .img-container img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+  .container-product .info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 10px;
+  }
+
+    .container-product .info-container .category-name{
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      color: #616161;
+      font-size: .8rem;
+    }
+
+    .container-product .info-container .product-name{
+      font-size: 3rem;
+      font-weight: 600;
+    }
+
+    .container-product .info-container .description-product{
+      color: #616161;
+      font-size: 1rem;
+      line-height: 30px;
+    }
+
+    .container-product .info-container .price-box{
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+      .container-product .info-container .price-box .price{
+        font-size: 2rem;
+        color: #3d8168;
+        font-weight: 600;
+      }
+
+      .container-product .info-container .price-box .ex-price{
+        font-size: 1rem;
+        color: #616161;
+        text-decoration: line-through;
+      }
+
+    .container-product .info-container .btn-box{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+      .container-product .info-container .btn-box button{
+        width: 90%;
+        height: 50px;
+        border-radius: 10px;
+        border: none;
+        background-color: #3d8168;
+        color: #fff;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        cursor: pointer;
+        transition: all .5s;
+
+        &:hover {
+          background-color: #194031;
+        }
+      }
+
+@media (max-width: 710px) {
+  .container-product {
+    flex-direction: column;
+    height: 700px;
+    width: 90%;
+  }
+
+  .container-product .img-container, 
+  .container-product .info-container {
+    width: 100%;
+  }
+
+  .container-product .img-container {
+    height: 30%;
+  }
+
+  .container-product .info-container {
+    height: 70%;
+  }
+  
+  .container-product .info-container {
+    padding: 30px;
+  }
+  .container-product .info-container .btn-box button{
+    width: 100%;
+  }
+}
